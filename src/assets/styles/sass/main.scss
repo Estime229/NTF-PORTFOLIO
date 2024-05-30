@@ -1,0 +1,161 @@
+@import "mixin";
+
+*{
+  transition: .2s linear;
+}
+body,html{
+  font-family: $font-default !important;
+  font-size: 14px;
+   color: $color-primary;
+  background-color: $main-background;
+  overflow-x: hidden;
+  min-height: 100vh;
+  // $font-smoothing();
+}
+button{
+  outline: none;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
+input[type=password]{}
+a{
+  text-decoration: none;
+  color: #2983FF;
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  //-webkit-box-shadow: inset 0 0 6px rgb(201, 201, 201);
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background: transparent;
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: transparent;
+}
+
+/**
+css générique du site
+
+*/
+.lt_btn{
+  color: $white;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  box-shadow: 0px 4px 10px 0px #0000001a;
+  padding: 1rem 4.2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  position: relative;
+  // outline: none!important;
+  &:hover{
+    background: $white;
+    color: $color-primary;
+    &.loading:after {
+      border-color: $color-primary;
+    }
+  }
+  &.noHover:hover{
+    // color: $white;
+    background: $red;
+    cursor: unset;
+  }
+  &.loading:after {
+    position: absolute;
+    animation: 1s linear 0s infinite rotation;
+    content: '';
+    background-color: transparent;
+    // border: solid 3px $white;
+    border-left-color: transparent!important;
+    border-radius: 50%;
+    right: 3%;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.page_title_container {
+  font-size: 1.8rem;
+  color: $light_gray;
+  font-weight: 600;
+  width: 100%;
+  text-transform: capitalize;
+  margin: 0.3rem 0 1.8rem 0;
+}
+
+.container{
+  padding: 0 1rem;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    // max-width: 1090px!important;
+  }
+}
+
+
+@media (max-width: 1140px) {
+
+}
+
+/**
+ transitions
+ */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+    // transform: translate(-50%, -50%);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(360deg);
+    // transform: translate(-50%, -50%);
+  }
+}
+@keyframes spin {
+  from {
+    width: .5rem;
+    height: .5rem;
+  }
+  to{
+    width: 100%;
+    height: 100%;
+  }
+}
+input,button{
+  outline: none!important;
+  &:focus,&:active{
+    outline: none;
+  }
+}
+/***
+ fin transitions
+ */

@@ -1,0 +1,103 @@
+@import "variables";
+@mixin box-shadow( $h-shadow: 0px, $v-shadow: 1px, $blur: 2px, $spread: 0px, $color: fade($black, 15%) ){
+  -webkit-box-shadow:  $h-shadow $v-shadow $blur $spread $color;
+  -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+  box-shadow: $h-shadow $v-shadow $blur $spread $color;
+}
+
+@mixin inner-box-shadow( $h-shadow: 0px, $v-shadow: 1px, $blur: 2px, $spread: 0px, $color: fade($black, 15%) ){
+  -webkit-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+  -moz-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+  box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+}
+
+@mixin animation( $animation_name, $duration: 1s, $timing_function: ease ){
+  animation: $animation_name $duration $timing_function;
+}
+
+@mixin box-size( $property: border-box ){
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin font-smoothing(){
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin no-select(){
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+}
+
+@mixin placeholder($font-size: 1em, $color: #ccc, $margin: auto .5rem){
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+  }
+  &:-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $font-size;
+    margin: $margin;
+  }
+}
+
+@mixin select-color($color: #ccc){
+  ::-moz-selection {
+    color: #fff;
+    background-color: $primary-color
+  }
+  ::selection {
+    color: #fff!important;
+    background-color: $primary-color-alter!important;
+  }
+}
+@mixin scrollbar-set($color: rgba(0,0,0,0.1), $size: 6px){
+
+  *::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    transition: all 2s ease;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $color;
+    transition: all 2s ease;
+  }
+  *::-webkit-scrollbar-track {
+    // background: rgba(255, 255, 255, 0.02);
+    transition: all 2s ease;
+    background: transparent;
+  }
+}
+
+@mixin no-wraping(){
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+@mixin no-wraping-V(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  // line-height: 16px;     /* fallback */
+  // max-height: 64px;      /* fallback */
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
