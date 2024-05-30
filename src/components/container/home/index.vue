@@ -1,7 +1,7 @@
 <template>
   <div class="begin index-home">
     <div class="bg-white mx-auto text-center">
-      {{ $t("title") }}
+      {{ $t("message") }}
     </div>
 
     <div class="w-full mt-8">
