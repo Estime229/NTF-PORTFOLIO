@@ -1,6 +1,6 @@
 <template>
   <div class="begin index-home">
-    <div class="bg-white mx-auto text-center">
+    <div class="text-blue-700 mx-auto text-center">
       {{ $t("message") }}
     </div>
 
