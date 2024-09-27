@@ -6,6 +6,30 @@ const routes = [
     name: "Home",
     component: pathLoader("home"),
   },
+  {
+    path: "/timeline",
+    name: "timeline",
+    props: true,
+    component: () => import("@/components/container/timeline/timeline.vue"),
+  },
+  {
+    path: "/about",
+    name: "about",
+    props: true,
+    component: () => import("@/components/container/about/about.vue"),
+  },
+  {
+    path: "/work",
+    name: "work",
+    props: true,
+    component: () => import("@/components/container/work/work.vue"),
+  },
+  {
+    path: "/tech",
+    name: "tech",
+    props: true,
+    component: () => import("@/components/container/tech/tech.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -1,3 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base;  
+@tailwind components;  
+@tailwind utilities;  
+
+body {  
+    background-image: url('/src/assets/icons/background.png'); /* Remplacez par le chemin de votre image */  
+    background-size: cover; /* Pour couvrir toute la surface */  
+    background-position: center; /* Pour centrer l'image */  
+    background-repeat: no-repeat; /* Pour éviter que l'image se répète */  
+
+/* Style par défaut */  
+body {  
+  background-color: white;  
+  color: black;  
+}  
+
+/* Style en mode sombre */  
+.dark body {  
+  background-color: black;  
+  color: white;  
+}
+  
+}
+

@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   presets: [],
-  darkMode: "media", // or 'class'
+  darkMode: "class", // Ou 'media' si vous voulez les préférences du système
   theme: {
     extend: {
       colors: {},
@@ -352,6 +352,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      dancing: ["Dancing Script", "cursive"],
+
       sans: [
         "ui-sans-serif",
         "system-ui",
@@ -375,6 +377,7 @@ module.exports = {
         '"Times New Roman"',
         "Times",
         "serif",
+        "Edu+AU+VIC+WA+NT+Guides",
       ],
       mono: [
         "ui-monospace",

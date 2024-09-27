@@ -1,46 +1,99 @@
 <template>
-  <div class="begin index-home">
-    <div class="text-blue-700 mx-auto text-center">
-      {{ $t("message") }}
-    </div>
+  <Container>
+    <Header />
+    <Head />
+    <Stack />
+    <Choose />
+    <Estimeted />
+    <Projet />
+    <contact />
+    <Footer />
 
-    <div class="w-full mt-8">
-      <img
-        :src="images.cover"
-        width="200"
-        height="200"
-        alt="cover"
-        class=""
-        original
-      />
-    </div>
-    <div class="mt-8">
-      <icon
-        :data="icons.benin"
-        width="20"
-        height="20"
-        alt="benin-map"
-        class=""
-        original
-      />
-    </div>
-  </div>
+    <!-- <Collection />
+    <Stack />
+    <Stack /> -->
+  </Container>
 </template>
 
 <script>
 import cover from "@/assets/images/img_cover.webp";
-import benin from "@/assets/icons/ic_benin.svg";
+import insta from "@/assets/icons/insta.svg";
+import twitter from "@/assets/icons/twitter.svg";
+import link from "@/assets/icons/link.svg";
+import card from "@/assets/icons/card.svg";
+import Container from "@/components/helper/container.vue";
+import Head from "../front/head.vue";
+import Stack from "../front/stack.vue";
+import Choose from "../front/choose.vue";
+import Estimeted from "../front/estimeted.vue";
+import Projet from "../front/projet.vue";
+import Contact from "../front/contact.vue";
+import Footer from "@/components/helper/footer.vue";
+import Header from "@/components/helper/header.vue";
+// import Collection from "../front/collection.vue";
 export default {
-  components: {},
+  components: {
+    Container,
+    Head,
+    Stack,
+    Choose,
+    Estimeted,
+    Projet,
+    Contact,
+    Footer,
+    Header,
+  },
   name: "index-home",
   data() {
     return {
-      icons: { benin },
+      isMenuOpen: false,
+
+      icons: { insta, twitter, link, card },
       images: { cover },
     };
   },
   created() {},
-  methods: {},
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+    },
+    scrollToService() {
+      this.showMobileMenu = false;
+      // Récupérez l'élément d'ancre par son identifiant
+      const anchor = document.getElementById("service");
+
+      // Utilisez scrollIntoView pour effectuer un défilement fluide vers l'ancre
+      anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // 'start' pour faire défiler l'ancre en haut de la fenêtre
+      });
+    },
+    scrollToAbout() {
+      this.showMobileMenu = false;
+      // Récupérez l'élément d'ancre par son identifiant
+      const anchor = document.getElementById("about");
+
+      // Utilisez scrollIntoView pour effectuer un défilement fluide vers l'ancre
+      anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // 'start' pour faire défiler l'ancre en haut de la fenêtre
+      });
+    },
+    scrollToContact() {
+      this.showMobileMenu = false;
+      // Récupérez l'élément d'ancre par son identifiant
+      const anchor = document.getElementById("contact");
+
+      // Utilisez scrollIntoView pour effectuer un défilement fluide vers l'ancre
+      anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // 'start' pour faire défiler l'ancre en haut de la fenêtre
+      });
+    },
+  },
 };
 </script>
 
