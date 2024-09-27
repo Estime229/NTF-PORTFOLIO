@@ -14,9 +14,10 @@
             Full-Stack JS Techno Developper 👋
           </h1>
           <h1
-            class="text-[#7B7583] font-medium text-2xl md:text-4xl h-auto md:h-16 mt-5 animate-slideUp opacity-0 font-dancing"
+            class="text-[#7B7583] font-medium text-2xl md:text-3xl h-auto md:h-16 mt-5 animate-slideUp opacity-0 font-dancing"
           >
-            Hi, I'm Gliti. A passionate Developper based in Africa, Bénin 🎈
+            Hi, I'm Gliti Estimé. A passionate Developper based in Africa,
+            Bénin🎈
           </h1>
           <button
             class="bg-[#c982e6] w-[266.75px] md:w-[266.75px] h-14 md:h-20 rounded-full mt-6 md:mt-10 flex items-center justify-center text-white text-lg md:text-xl font-bold gap-3 animate-slideUp opacity-0"
