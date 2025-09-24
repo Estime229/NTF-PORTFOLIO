@@ -5,7 +5,7 @@
     >
       <!-- Logo Section -->
       <div class="flex w-full md:w-auto justify-between items-center">
-        <h1 class="text-3xl mb-2 md:mb-0 text-[#FF00EA] font-dancing font-bold">
+        <h1 class="text-3xl mb-2 md:mb-0 text-[#FF00EA] font-bold">
           EG <span class="text-[#2600FC]">.dev</span>
         </h1>
         <!-- Mobile Menu Button -->
